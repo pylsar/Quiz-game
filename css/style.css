@@ -3,3 +3,66 @@
 	padding: 0px;
 	box-sizing: border-box;
 }
+
+:root{
+	--bgColor-neitral: 200;
+	--bgColor-wrong: 0;
+	--bgColor-correct: 145;
+}
+
+body{
+	--bgColor: var(--bgColor-neitral);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	width: 100vw;
+	background-color: hsl(var(--bgColor), 100%, 20%);
+}
+
+body.correct {
+	--bgColor: var(--bgColor-correct);
+}
+
+body.wrong {
+	--bgColor: var(--bgColor-wrong);
+}
+
+.hide{
+	display: none;
+}
+
+button{
+	border-radius: 5px;
+	outline: none;
+}
+
+.start, .next{
+	padding: 10px 20px;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+.quiz__container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#quiz__question {
+	width: 600px;
+	background-color: white;
+}
+
+#answers {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin: 10px;
+}
+
+#answers button{
+	width: 45%;
+	min-height: 50px;
+	margin: 10px;
+}
